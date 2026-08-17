@@ -101,7 +101,7 @@ h2 { font-size:clamp(2rem,3.2vw,3rem); }
 .work-pdf:hover,.work-pdf:focus-visible { background:var(--ink); color:white; }
 .work-pdf.pdf-disabled { border-color:var(--line); color:var(--muted); opacity:.7; cursor:not-allowed; }
 .award { display:table; margin-top:.35rem; padding:.18rem .45rem; border-radius:2px; background:#f1ddd5; color:#8f3f2c; font-size:.68rem; font-weight:600; line-height:1.35; }
-.working-papers { margin-top:5rem; margin-left:100px; }
+.working-papers { margin-top:5rem; margin-left:0; }
 .working-papers h3 { font:400 2.2rem "Newsreader",serif; }
 .working-papers ul { list-style:none; padding:0; }
 .working-papers li { padding:1rem 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:2rem; }
