@@ -68,6 +68,7 @@ h2 { font-size:clamp(2rem,3.2vw,3rem); }
 .button.secondary { border:1px solid var(--ink); }
 .button:hover { transform:translateY(-2px); }
 .section { padding:6rem 0; border-top:1px solid var(--line); }
+.section h2 { font-size:2.2rem; }
 .research-strip,.split { display:grid; grid-template-columns:1fr 2fr; gap:7vw; }
 .section-lead { margin:0; max-width:750px; font-family:"Newsreader",serif; font-size:clamp(1.8rem,3.5vw,3rem); line-height:1.25; }
 .research-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; margin-top:3.5rem; background:var(--line); border:1px solid var(--line); }
@@ -105,8 +106,7 @@ h2 { font-size:clamp(2rem,3.2vw,3rem); }
 .working-papers h3 { font:400 2.2rem "Newsreader",serif; }
 .working-papers ul { list-style:none; padding:0; }
 .working-papers li { padding:1rem 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:2rem; }
-.working-papers li>span { font-size:.92rem; font-weight:600; line-height:1.35; }
-.working-papers small { color:var(--muted); max-width:42%; text-align:right; font-size:.82rem; }
+.working-papers small { color:var(--muted); max-width:42%; text-align:right; }
 .revision-status { display:inline-block; margin-top:.25rem; color:inherit; font-weight:400; }
 .timeline article { display:grid; grid-template-columns:120px 1fr; padding:0 0 2rem; }
 .timeline article>span { color:var(--accent); font-size:.78rem; }
