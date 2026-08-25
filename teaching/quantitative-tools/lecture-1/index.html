@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12345b">
+  <meta name="description" content="ECO6067 Lecture 1 — Introduction to Artificial Intelligence">
+  <title>ECO6067 · Lecture 1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#slide-stage">Skip to slides</a>
+  <header class="course-bar">
+    <a class="course-mark" href="../" aria-label="Back to ECO6067">
+      <span class="crest">HKU</span>
+      <span><strong>ECO6067</strong><small>Quantitative Tools for Economic Analysis</small></span>
+    </a>
+    <a class="download-link" href="Lecture1.pdf" download>
+      <span aria-hidden="true">↓</span> Download PDF
+    </a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">Lecture 1 · Course slides</p>
+      <h1>Introduction to<br>Artificial Intelligence</h1>
+      <p class="lede">Why is AI suddenly everywhere? Explore the lecture online, or download the complete slide deck as a PDF.</p>
+      <div class="intro-actions">
+        <button class="primary" id="startButton" type="button">Start presentation <span aria-hidden="true">→</span></button>
+        <a class="secondary" href="Lecture1.pdf" download>Download Lecture1.pdf</a>
+      </div>
+    </section>
+
+    <section class="viewer" aria-label="Interactive lecture slides">
+      <div class="viewer-topline">
+        <div>
+          <span class="live-dot" aria-hidden="true"></span>
+          Interactive slide viewer
+        </div>
+        <div class="viewer-actions">
+          <button id="overviewButton" type="button" aria-expanded="false">Overview</button>
+          <button id="fullscreenButton" type="button">Full screen</button>
+        </div>
+      </div>
+
+      <div class="viewer-shell">
+        <aside id="filmstrip" class="filmstrip" aria-label="Slide thumbnails"></aside>
+        <div class="stage-wrap">
+          <div id="slide-stage" class="stage" tabindex="0" aria-live="polite">
+            <img id="currentSlide" src="slides/slide-1.png" alt="Slide 1 of 49">
+            <div class="loading" id="loading">Loading slide…</div>
+          </div>
+          <div class="controls">
+            <button id="previousButton" type="button" aria-label="Previous slide">←</button>
+            <div class="progress-wrap">
+              <span id="counter">01 / 49</span>
+              <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+              <span class="hint">Use ← → keys</span>
+            </div>
+            <button id="nextButton" type="button" aria-label="Next slide">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>ECO6067 · Lecture 1</span>
+    <span>The University of Hong Kong</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
