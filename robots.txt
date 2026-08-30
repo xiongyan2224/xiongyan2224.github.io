@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /teaching/
 
 Sitemap: https://xiongyan2224.github.io/sitemap.xml

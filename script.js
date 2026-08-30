@@ -18,6 +18,17 @@ document.querySelectorAll('[data-carousel]').forEach((button) => {
   });
 });
 
+const courseTrack = document.querySelector('.course-grid');
+document.querySelectorAll('[data-courses]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const card = courseTrack?.querySelector('.course-card');
+    const gap = 16;
+    const distance = card ? card.getBoundingClientRect().width + gap : 320;
+    const direction = button.dataset.courses === 'next' ? 1 : -1;
+    courseTrack?.scrollBy({ left: direction * distance, behavior: 'smooth' });
+  });
+});
+
 document.querySelectorAll('.papers h3 a').forEach((titleLink) => {
   const articleUrl = titleLink.href;
   const title = titleLink.textContent;
