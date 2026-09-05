@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A verified, beginner-friendly guide to installing Python, VS Code, and Claude Code with the DeepSeek API.">
+  <meta name="description" content="A verified, beginner-friendly guide to installing VS Code, Claude Code with the DeepSeek API, and Python.">
   <meta name="theme-color" content="#17324d">
   <link rel="canonical" href="https://xiongyan2224.github.io/resources/environment-setup/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
-  <title>Python, VS Code, and Claude Code Setup Guide</title>
+  <title>VS Code, Claude Code, and Python Setup Guide</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,9 +18,9 @@
       <p class="toc-title">Contents</p>
       <ul>
         <li><a href="#before-you-begin-get-help-from-hku-genai-app">Before You Begin: Get Help from HKU GenAI App</a></li>
-        <li><a href="#part-1-installing-python">Part 1: Installing Python</a></li>
-        <li><a href="#part-2-installing-and-introducing-vs-code">Part 2: Installing and Introducing VS Code</a></li>
-        <li><a href="#part-3-installing-claude-code-with-deepseek-api-in-vs-code">Part 3: Installing Claude Code with DeepSeek API in VS Code</a></li>
+        <li><a href="#part-1-installing-and-introducing-vs-code">Part 1: Installing and Introducing VS Code</a></li>
+        <li><a href="#part-2-installing-claude-code-with-deepseek-api-in-vs-code">Part 2: Installing Claude Code with DeepSeek API in VS Code</a></li>
+        <li><a href="#part-3-installing-python">Part 3: Installing Python</a></li>
         <li><a href="#official-references">Official References</a></li>
       </ul>
     </nav>
@@ -29,13 +29,13 @@
       <header class="hero">
         <a class="home-link" href="https://xiongyan2224.github.io/">← Yan Xiong</a>
         <p class="eyebrow">Setup Guide</p>
-        <h1>Python, VS Code, and Claude Code Setup Guide</h1>
-        <p class="lead">A beginner-friendly installation guide for Python, VS Code, and Claude Code with DeepSeek API.</p>
+        <h1>VS Code, Claude Code, and Python Setup Guide</h1>
+        <p class="lead">A beginner-friendly installation guide for VS Code, Claude Code with DeepSeek API, and Python.</p>
       </header>
 
       <div class="content">
 <p><strong>Last verified:</strong> September 5, 2026. The installation commands and links below were checked against the official Python, VS Code, Claude Code, DeepSeek, and CC Switch documentation listed at the end of this guide.</p>
-<p>This guide is written for beginners who want to set up a complete coding environment before using Claude Code. Follow the parts in order: install Python first, install and understand VS Code second, then install Claude Code and connect it with DeepSeek API.</p>
+<p>This guide is written for beginners who want a working AI-assisted coding environment. Follow the parts in order: install and understand VS Code first, install Claude Code and connect it with the DeepSeek API second, then install Python. Once Claude Code is working, you can ask it to explain Python installation errors as they appear.</p>
 <section id="before-you-begin-get-help-from-hku-genai-app" class="opening-section">
 <h2>Before You Begin: Get Help from HKU GenAI App</h2>
 <p>Computer settings vary by operating system, version, user permissions, network environment, and previously installed software. Because of these differences, you may encounter error messages or installation problems that do not look exactly like the examples in this guide.</p>
@@ -47,78 +47,10 @@
   <figcaption class="caption">HKU GenAI App homepage for asking installation questions</figcaption>
 </figure>
 </section>
-<section id="part-1-installing-python">
-<h2>Part 1: Installing Python</h2>
-<p>Install Python from the official website, choose the right version, and make sure Python can be used from VS Code or Terminal.</p>
-<p>Python is the programming language runtime. After installation, your computer will be able to run <code>.py</code> files and use Python package tools such as <code>pip</code>.</p>
-<h3>Step 1: Open the Python Download Page</h3>
-<p>Go to the official Python download page:</p>
-<p><a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">https://www.python.org/downloads/</a></p>
-<p>The official website is the safest place to download Python. Avoid downloading Python installers from random third-party websites, because they may be outdated or modified.</p>
-<figure class="image-frame">
-  <img src="python-install-assets/image1.png" alt="Python official download page">
-  <figcaption class="caption">Python official download page</figcaption>
-</figure>
-<h3>Step 2: Choose a Python Version</h3>
-<p>In most cases, install the latest stable version of Python.</p>
-<p>Some projects may require a specific Python version. Different Python versions can exist on the same computer when needed.</p>
-<p>For beginners, the latest stable version is usually the best choice. If a project tells you to use a specific version, follow that project requirement instead.</p>
-<figure class="image-frame">
-  <img src="python-install-assets/image2.png" alt="Python version options">
-  <figcaption class="caption">Python version options</figcaption>
-</figure>
-<p>Choose the version you need and install the package that matches your operating system.</p>
-<p>For example, Windows users should download a Windows installer, macOS users should download a macOS installer, and Linux users normally install Python through their package manager.</p>
-<blockquote><p>Windows note: Current Python documentation recommends the <strong>Python Install Manager</strong>. If the main download gives you the Install Manager, install it, open a new terminal, and run <code>py install</code> to install the latest stable Python runtime. The traditional Windows installer shown in the screenshots below is also acceptable if it is offered on the download page.</p></blockquote>
-<figure class="image-frame">
-  <img src="python-install-assets/image3.png" alt="Python installer selection">
-  <figcaption class="caption">Python installer selection</figcaption>
-</figure>
-<h3>Step 3: Configure the Traditional Windows Installer, if Shown</h3>
-<p>If you are using the traditional Windows installer shown below, select <strong>Add python.exe to PATH</strong> so commands such as <code>python</code> can be used directly in VS Code or Terminal. If you installed with the Python Install Manager or you are using macOS or Linux, skip this step.</p>
-<p>PATH is a system setting that tells your computer where to find command-line tools. If Python is added to PATH, you can type commands like <code>python</code>, <code>py</code>, or <code>pip</code> without manually opening the Python installation folder.</p>
-<figure class="image-frame">
-  <img src="python-install-assets/image4.png" alt="Add python.exe to PATH">
-  <figcaption class="caption">Add python.exe to PATH</figcaption>
-</figure>
-<figure class="image-frame">
-  <img src="python-install-assets/image5.png" alt="Python installer options">
-  <figcaption class="caption">Python installer options</figcaption>
-</figure>
-<p><strong>Install for all users</strong> makes Python available to other accounts on the same computer.</p>
-<p>This option is useful if several users share the same computer. If you are the only user, either option usually works, but installing for all users may require administrator permission.</p>
-<blockquote><p>Note: Use an English-only installation path when possible. Non-English characters in the path may cause problems in some tools.</p></blockquote>
-<h3>Step 4: Fix PATH on Windows if Needed</h3>
-<p>If you used the traditional Windows installer and forgot to add Python to PATH, you can add it manually.</p>
-<p>You only need this step if commands such as <code>python --version</code>, <code>py --version</code>, or <code>pip --version</code> cannot be found after installation.</p>
-<ol><li>Open <strong>Advanced System Settings</strong> on your computer.</li><li>Find <strong>Path</strong> and open it.</li><li>Add the Python installation location.</li></ol>
-<p>If you used the Python Install Manager, first open <strong>Manage app execution aliases</strong> in Windows Settings and confirm that the Python aliases are enabled. The official Windows troubleshooting page linked at the end of this guide has additional checks.</p>
-<figure class="image-frame">
-  <img src="python-install-assets/image6.png" alt="Open Advanced System Settings">
-  <figcaption class="caption">Open Advanced System Settings</figcaption>
-</figure>
-<figure class="image-frame">
-  <img src="python-install-assets/image7.png" alt="Edit the Path variable">
-  <figcaption class="caption">Edit the Path variable</figcaption>
-</figure>
-<figure class="image-frame">
-  <img src="python-install-assets/image8.png" alt="Add the Python installation path">
-  <figcaption class="caption">Add the Python installation path</figcaption>
-</figure>
-<h3>Step 5: Check the Python Installation</h3>
-<p>Use the commands for your operating system. On macOS or Linux, open Terminal or the VS Code terminal and run:</p>
-<pre><code>python3 --version
-python3 -m pip --version</code></pre>
-<p>On Windows, open PowerShell, Command Prompt, or the VS Code terminal and run:</p>
-<pre><code>py --version
-py -m pip --version</code></pre>
-<p>Using <code>python3 -m pip</code> or <code>py -m pip</code> makes sure that <code>pip</code> belongs to the same Python installation you just checked. This is more reliable than running <code>pip</code> by itself when several Python versions are installed.</p>
-<p>If both commands show version numbers, Python and pip are installed correctly. If a command is not found, check whether Python was installed correctly and added to PATH.</p>
-</section>
-<section id="part-2-installing-and-introducing-vs-code">
-<h2>Part 2: Installing and Introducing VS Code</h2>
+<section id="part-1-installing-and-introducing-vs-code">
+<h2>Part 1: Installing and Introducing VS Code</h2>
 <p>Install VS Code, learn the main interface areas, and understand the menus commonly used by Python beginners.</p>
-<p>VS Code is the editor where you write, organize, run, and debug code. It becomes especially useful after installing extensions such as Python and Jupyter.</p>
+<p>VS Code is the workbench where you will install Claude Code, ask questions, organize files, and later run Python. Setting it up first gives every later step one consistent place to work.</p>
 <h3>Step 1: Download VS Code</h3>
 <p>Go to the official VS Code download page:</p>
 <p><a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com/download</a></p>
@@ -169,8 +101,8 @@ py -m pip --version</code></pre>
 <tbody><tr><td>File</td><td>Manages files, folders, and windows.</td><td>To start a Python project, choose File -&gt; Open Folder, then select your project folder.</td></tr><tr><td>Edit</td><td>Helps you edit text in the editor.</td><td>Common shortcuts include Ctrl + Z for undo, Ctrl + C for copy, Ctrl + V for paste, and Ctrl + F for find.</td></tr><tr><td>Selection</td><td>Controls text selection and cursor behavior.</td><td>This is not used often at the beginning, but it becomes useful when editing many lines at once.</td></tr><tr><td>View</td><td>Controls what parts of the VS Code interface are displayed.</td><td>If you cannot find the terminal, choose View -&gt; Terminal.</td></tr><tr><td>Go</td><td>Helps you quickly jump to different places in your project.</td><td>This is useful when your project becomes larger and has many files.</td></tr><tr><td>Run</td><td>Runs and debugs your program.</td><td>Use this menu to run a Python file or debug your code step by step.</td></tr><tr><td>Terminal</td><td>Opens the command line inside VS Code.</td><td>On macOS/Linux, use <code>python3 --version</code> or <code>python3 test.py</code>. On Windows, use <code>py --version</code> or <code>py test.py</code>.</td></tr><tr><td>Help</td><td>Provides help and information about VS Code.</td><td>Use this menu when you need official help or want to check your VS Code version.</td></tr></tbody>
 </table>
 </section>
-<section id="part-3-installing-claude-code-with-deepseek-api-in-vs-code">
-<h2>Part 3: Installing Claude Code with DeepSeek API in VS Code</h2>
+<section id="part-2-installing-claude-code-with-deepseek-api-in-vs-code">
+<h2>Part 2: Installing Claude Code with DeepSeek API in VS Code</h2>
 <p>Install Claude Code, connect it with VS Code, and configure the DeepSeek API through CC Switch.</p>
 <p>Claude Code is a coding assistant that can help you understand code, edit files, run commands, and work inside a project. In this guide, Claude Code is configured to use the DeepSeek API through CC Switch.</p>
 <h3>Prerequisites</h3>
@@ -269,7 +201,7 @@ brew upgrade claude-code@latest</code></pre>
   <figcaption class="caption">Configure DeepSeek API key in CC Switch</figcaption>
 </figure>
 <h3>Finish Setup</h3>
-<p>Open your project folder in VS Code, open the integrated Terminal, and run <code>claude</code>. Enter a simple test request. If Claude Code responds normally, the DeepSeek provider is active.</p>
+<p>Open your project folder in VS Code, open the integrated Terminal, and run <code>claude</code>. Enter a simple test request. If Claude Code responds normally, the DeepSeek provider is active. Keep Claude Code available while you complete Part 3 so you can ask it to explain any Python installation error.</p>
 <p>If Claude Code still asks you to sign in or shows an onboarding wizard, open <strong>CC Switch -&gt; Settings -&gt; General</strong>, enable <strong>Skip Claude Code first-run confirmation</strong>, close Claude Code, and start it again. This setting skips the official onboarding screen; it does not create an Anthropic account.</p>
 <p>If the test fails, check these items in order:</p>
 <ul class="checklist"><li>Run <code>claude doctor</code> and resolve any installation warning.</li><li>Confirm that the DeepSeek provider card is marked active in CC Switch.</li><li>Confirm that the API key has no extra spaces and that the DeepSeek account has API balance.</li><li>Close and reopen the terminal, then run <code>claude</code> again.</li></ul>
@@ -277,6 +209,74 @@ brew upgrade claude-code@latest</code></pre>
   <img src="install-cc-in-vscode-assets/image9.png" alt="Claude Code ready to use">
   <figcaption class="caption">Claude Code ready to use</figcaption>
 </figure>
+</section>
+<section id="part-3-installing-python">
+<h2>Part 3: Installing Python</h2>
+<p>Now that VS Code and Claude Code are ready, install Python from the official website, choose the right version, and make sure Python can be used from the VS Code terminal.</p>
+<p>Python is the programming language runtime. After installation, your computer will be able to run <code>.py</code> files and use Python package tools such as <code>pip</code>. If a command fails, remove any passwords or API keys from the error message, then ask Claude Code in VS Code to explain the error and suggest the next check.</p>
+<h3>Step 1: Open the Python Download Page</h3>
+<p>Go to the official Python download page:</p>
+<p><a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">https://www.python.org/downloads/</a></p>
+<p>The official website is the safest place to download Python. Avoid downloading Python installers from random third-party websites, because they may be outdated or modified.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image1.png" alt="Python official download page">
+  <figcaption class="caption">Python official download page</figcaption>
+</figure>
+<h3>Step 2: Choose a Python Version</h3>
+<p>In most cases, install the latest stable version of Python.</p>
+<p>Some projects may require a specific Python version. Different Python versions can exist on the same computer when needed.</p>
+<p>For beginners, the latest stable version is usually the best choice. If a project tells you to use a specific version, follow that project requirement instead.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image2.png" alt="Python version options">
+  <figcaption class="caption">Python version options</figcaption>
+</figure>
+<p>Choose the version you need and install the package that matches your operating system.</p>
+<p>For example, Windows users should download a Windows installer, macOS users should download a macOS installer, and Linux users normally install Python through their package manager.</p>
+<blockquote><p>Windows note: Current Python documentation recommends the <strong>Python Install Manager</strong>. If the main download gives you the Install Manager, install it, open a new terminal, and run <code>py install</code> to install the latest stable Python runtime. The traditional Windows installer shown in the screenshots below is also acceptable if it is offered on the download page.</p></blockquote>
+<figure class="image-frame">
+  <img src="python-install-assets/image3.png" alt="Python installer selection">
+  <figcaption class="caption">Python installer selection</figcaption>
+</figure>
+<h3>Step 3: Configure the Traditional Windows Installer, if Shown</h3>
+<p>If you are using the traditional Windows installer shown below, select <strong>Add python.exe to PATH</strong> so commands such as <code>python</code> can be used directly in VS Code or Terminal. If you installed with the Python Install Manager or you are using macOS or Linux, skip this step.</p>
+<p>PATH is a system setting that tells your computer where to find command-line tools. If Python is added to PATH, you can type commands like <code>python</code>, <code>py</code>, or <code>pip</code> without manually opening the Python installation folder.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image4.png" alt="Add python.exe to PATH">
+  <figcaption class="caption">Add python.exe to PATH</figcaption>
+</figure>
+<figure class="image-frame">
+  <img src="python-install-assets/image5.png" alt="Python installer options">
+  <figcaption class="caption">Python installer options</figcaption>
+</figure>
+<p><strong>Install for all users</strong> makes Python available to other accounts on the same computer.</p>
+<p>This option is useful if several users share the same computer. If you are the only user, either option usually works, but installing for all users may require administrator permission.</p>
+<blockquote><p>Note: Use an English-only installation path when possible. Non-English characters in the path may cause problems in some tools.</p></blockquote>
+<h3>Step 4: Fix PATH on Windows if Needed</h3>
+<p>If you used the traditional Windows installer and forgot to add Python to PATH, you can add it manually.</p>
+<p>You only need this step if commands such as <code>python --version</code>, <code>py --version</code>, or <code>pip --version</code> cannot be found after installation.</p>
+<ol><li>Open <strong>Advanced System Settings</strong> on your computer.</li><li>Find <strong>Path</strong> and open it.</li><li>Add the Python installation location.</li></ol>
+<p>If you used the Python Install Manager, first open <strong>Manage app execution aliases</strong> in Windows Settings and confirm that the Python aliases are enabled. The official Windows troubleshooting page linked at the end of this guide has additional checks.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image6.png" alt="Open Advanced System Settings">
+  <figcaption class="caption">Open Advanced System Settings</figcaption>
+</figure>
+<figure class="image-frame">
+  <img src="python-install-assets/image7.png" alt="Edit the Path variable">
+  <figcaption class="caption">Edit the Path variable</figcaption>
+</figure>
+<figure class="image-frame">
+  <img src="python-install-assets/image8.png" alt="Add the Python installation path">
+  <figcaption class="caption">Add the Python installation path</figcaption>
+</figure>
+<h3>Step 5: Check the Python Installation</h3>
+<p>Use the commands for your operating system. On macOS or Linux, open Terminal or the VS Code terminal and run:</p>
+<pre><code>python3 --version
+python3 -m pip --version</code></pre>
+<p>On Windows, open PowerShell, Command Prompt, or the VS Code terminal and run:</p>
+<pre><code>py --version
+py -m pip --version</code></pre>
+<p>Using <code>python3 -m pip</code> or <code>py -m pip</code> makes sure that <code>pip</code> belongs to the same Python installation you just checked. This is more reliable than running <code>pip</code> by itself when several Python versions are installed.</p>
+<p>If both commands show version numbers, Python and pip are installed correctly. If a command is not found, check whether Python was installed correctly and added to PATH.</p>
 </section>
 <section id="official-references">
 <h2>Official References</h2>
