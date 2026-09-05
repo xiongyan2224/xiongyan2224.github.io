@@ -50,7 +50,7 @@
 <section id="part-1-installing-and-introducing-vs-code">
 <h2>Part 1: Installing and Introducing VS Code</h2>
 <p>Install VS Code, learn the main interface areas, and understand the menus commonly used by Python beginners.</p>
-<p>VS Code is the workbench where you will install Claude Code, ask questions, organize files, and later run Python. Setting it up first gives every later step one consistent place to work.</p>
+<p>VS Code is the editor where you write, organize, run, and debug code. Installing it first gives the later Claude Code and Python steps one consistent place to work.</p>
 <h3>Step 1: Download VS Code</h3>
 <p>Go to the official VS Code download page:</p>
 <p><a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com/download</a></p>
@@ -160,8 +160,6 @@ brew upgrade claude-code@latest</code></pre>
 <p>After completing the CC Switch configuration in the next step, open your project folder in VS Code, open its integrated Terminal, and run:</p>
 <pre><code>claude</code></pre>
 <p>If you see an interface similar to the screenshot below, Claude Code is ready to use.</p>
-<p>For a more detailed, read-only installation and settings check, run:</p>
-<pre><code>claude doctor</code></pre>
 <figure class="image-frame">
   <img src="install-cc-in-vscode-assets/image5.png" alt="Claude Code terminal interface">
   <figcaption class="caption">Claude Code terminal interface</figcaption>
@@ -182,8 +180,6 @@ brew upgrade claude-code@latest</code></pre>
 <thead><tr><th>Operating System</th><th>Installer</th></tr></thead>
 <tbody><tr><td>macOS</td><td>Choose the file ending in <code>.dmg</code></td></tr><tr><td>Windows</td><td>Choose the file ending in <code>.msi</code></td></tr></tbody>
 </table>
-<p>On macOS, you may alternatively install CC Switch with Homebrew:</p>
-<pre><code>brew install --cask cc-switch</code></pre>
 <figure class="image-frame">
   <img src="install-cc-in-vscode-assets/image7.png" alt="CC Switch provider presets">
   <figcaption class="caption">CC Switch provider presets</figcaption>
@@ -201,10 +197,8 @@ brew upgrade claude-code@latest</code></pre>
   <figcaption class="caption">Configure DeepSeek API key in CC Switch</figcaption>
 </figure>
 <h3>Finish Setup</h3>
-<p>Open your project folder in VS Code, open the integrated Terminal, and run <code>claude</code>. Enter a simple test request. If Claude Code responds normally, the DeepSeek provider is active. Keep Claude Code available while you complete Part 3 so you can ask it to explain any Python installation error.</p>
+<p>Open your project folder in VS Code, open the integrated Terminal, and run <code>claude</code>. Enter a simple test request. If Claude Code responds normally, the DeepSeek provider is active and you can use Claude Code while completing Part 3.</p>
 <p>If Claude Code still asks you to sign in or shows an onboarding wizard, open <strong>CC Switch -&gt; Settings -&gt; General</strong>, enable <strong>Skip Claude Code first-run confirmation</strong>, close Claude Code, and start it again. This setting skips the official onboarding screen; it does not create an Anthropic account.</p>
-<p>If the test fails, check these items in order:</p>
-<ul class="checklist"><li>Run <code>claude doctor</code> and resolve any installation warning.</li><li>Confirm that the DeepSeek provider card is marked active in CC Switch.</li><li>Confirm that the API key has no extra spaces and that the DeepSeek account has API balance.</li><li>Close and reopen the terminal, then run <code>claude</code> again.</li></ul>
 <figure class="image-frame">
   <img src="install-cc-in-vscode-assets/image9.png" alt="Claude Code ready to use">
   <figcaption class="caption">Claude Code ready to use</figcaption>
