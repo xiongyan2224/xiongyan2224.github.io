@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A verified, beginner-friendly guide to installing Python, VS Code, and Claude Code with the DeepSeek API.">
+  <meta name="theme-color" content="#17324d">
+  <link rel="canonical" href="https://xiongyan2224.github.io/resources/environment-setup/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap" rel="stylesheet">
+  <title>Python, VS Code, and Claude Code Setup Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc-title">Contents</p>
+      <ul>
+        <li><a href="#before-you-begin-get-help-from-hku-genai-app">Before You Begin: Get Help from HKU GenAI App</a></li>
+        <li><a href="#part-1-installing-python">Part 1: Installing Python</a></li>
+        <li><a href="#part-2-installing-and-introducing-vs-code">Part 2: Installing and Introducing VS Code</a></li>
+        <li><a href="#part-3-installing-claude-code-with-deepseek-api-in-vs-code">Part 3: Installing Claude Code with DeepSeek API in VS Code</a></li>
+        <li><a href="#official-references">Official References</a></li>
+      </ul>
+    </nav>
+
+    <main class="document">
+      <header class="hero">
+        <a class="home-link" href="https://xiongyan2224.github.io/">← Yan Xiong</a>
+        <p class="eyebrow">Setup Guide</p>
+        <h1>Python, VS Code, and Claude Code Setup Guide</h1>
+        <p class="lead">A beginner-friendly installation guide for Python, VS Code, and Claude Code with DeepSeek API.</p>
+      </header>
+
+      <div class="content">
+<p><strong>Last verified:</strong> September 5, 2026. The installation commands and links below were checked against the official Python, VS Code, Claude Code, DeepSeek, and CC Switch documentation listed at the end of this guide.</p>
+<p>This guide is written for beginners who want to set up a complete coding environment before using Claude Code. Follow the parts in order: install Python first, install and understand VS Code second, then install Claude Code and connect it with DeepSeek API.</p>
+<section id="before-you-begin-get-help-from-hku-genai-app" class="opening-section">
+<h2>Before You Begin: Get Help from HKU GenAI App</h2>
+<p>Computer settings vary by operating system, version, user permissions, network environment, and previously installed software. Because of these differences, you may encounter error messages or installation problems that do not look exactly like the examples in this guide.</p>
+<p>Open <strong>HKU GenAI App</strong>: <a href="https://genai.hku.hk" target="_blank" rel="noopener noreferrer">https://genai.hku.hk</a></p>
+<p>Sign in with your HKU Portal account. If you encounter a difficult problem during installation, ask HKU GenAI App for help. Include the step you are working on, your operating system, the exact command you entered, and the complete error message. A screenshot of the problem can also help it provide more specific instructions.</p>
+<blockquote><p>Important: Do not share passwords, API keys, access tokens, or other private information in your question. Remove or cover sensitive information before uploading a screenshot.</p></blockquote>
+<figure class="image-frame">
+  <img src="hku-chatgpt-assets/hku-genai-home.png" alt="HKU GenAI App homepage for asking installation questions">
+  <figcaption class="caption">HKU GenAI App homepage for asking installation questions</figcaption>
+</figure>
+</section>
+<section id="part-1-installing-python">
+<h2>Part 1: Installing Python</h2>
+<p>Install Python from the official website, choose the right version, and make sure Python can be used from VS Code or Terminal.</p>
+<p>Python is the programming language runtime. After installation, your computer will be able to run <code>.py</code> files and use Python package tools such as <code>pip</code>.</p>
+<h3>Step 1: Open the Python Download Page</h3>
+<p>Go to the official Python download page:</p>
+<p><a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">https://www.python.org/downloads/</a></p>
+<p>The official website is the safest place to download Python. Avoid downloading Python installers from random third-party websites, because they may be outdated or modified.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image1.png" alt="Python official download page">
+  <figcaption class="caption">Python official download page</figcaption>
+</figure>
+<h3>Step 2: Choose a Python Version</h3>
+<p>In most cases, install the latest stable version of Python.</p>
+<p>Some projects may require a specific Python version. Different Python versions can exist on the same computer when needed.</p>
+<p>For beginners, the latest stable version is usually the best choice. If a project tells you to use a specific version, follow that project requirement instead.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image2.png" alt="Python version options">
+  <figcaption class="caption">Python version options</figcaption>
+</figure>
+<p>Choose the version you need and install the package that matches your operating system.</p>
+<p>For example, Windows users should download a Windows installer, macOS users should download a macOS installer, and Linux users normally install Python through their package manager.</p>
+<blockquote><p>Windows note: Current Python documentation recommends the <strong>Python Install Manager</strong>. If the main download gives you the Install Manager, install it, open a new terminal, and run <code>py install</code> to install the latest stable Python runtime. The traditional Windows installer shown in the screenshots below is also acceptable if it is offered on the download page.</p></blockquote>
+<figure class="image-frame">
+  <img src="python-install-assets/image3.png" alt="Python installer selection">
+  <figcaption class="caption">Python installer selection</figcaption>
+</figure>
+<h3>Step 3: Configure the Traditional Windows Installer, if Shown</h3>
+<p>If you are using the traditional Windows installer shown below, select <strong>Add python.exe to PATH</strong> so commands such as <code>python</code> can be used directly in VS Code or Terminal. If you installed with the Python Install Manager or you are using macOS or Linux, skip this step.</p>
+<p>PATH is a system setting that tells your computer where to find command-line tools. If Python is added to PATH, you can type commands like <code>python</code>, <code>py</code>, or <code>pip</code> without manually opening the Python installation folder.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image4.png" alt="Add python.exe to PATH">
+  <figcaption class="caption">Add python.exe to PATH</figcaption>
+</figure>
+<figure class="image-frame">
+  <img src="python-install-assets/image5.png" alt="Python installer options">
+  <figcaption class="caption">Python installer options</figcaption>
+</figure>
+<p><strong>Install for all users</strong> makes Python available to other accounts on the same computer.</p>
+<p>This option is useful if several users share the same computer. If you are the only user, either option usually works, but installing for all users may require administrator permission.</p>
+<blockquote><p>Note: Use an English-only installation path when possible. Non-English characters in the path may cause problems in some tools.</p></blockquote>
+<h3>Step 4: Fix PATH on Windows if Needed</h3>
+<p>If you used the traditional Windows installer and forgot to add Python to PATH, you can add it manually.</p>
+<p>You only need this step if commands such as <code>python --version</code>, <code>py --version</code>, or <code>pip --version</code> cannot be found after installation.</p>
+<ol><li>Open <strong>Advanced System Settings</strong> on your computer.</li><li>Find <strong>Path</strong> and open it.</li><li>Add the Python installation location.</li></ol>
+<p>If you used the Python Install Manager, first open <strong>Manage app execution aliases</strong> in Windows Settings and confirm that the Python aliases are enabled. The official Windows troubleshooting page linked at the end of this guide has additional checks.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image6.png" alt="Open Advanced System Settings">
+  <figcaption class="caption">Open Advanced System Settings</figcaption>
+</figure>
+<figure class="image-frame">
+  <img src="python-install-assets/image7.png" alt="Edit the Path variable">
+  <figcaption class="caption">Edit the Path variable</figcaption>
+</figure>
+<figure class="image-frame">
+  <img src="python-install-assets/image8.png" alt="Add the Python installation path">
+  <figcaption class="caption">Add the Python installation path</figcaption>
+</figure>
+<h3>Step 5: Check the Python Installation</h3>
+<p>Use the commands for your operating system. On macOS or Linux, open Terminal or the VS Code terminal and run:</p>
+<pre><code>python3 --version
+python3 -m pip --version</code></pre>
+<p>On Windows, open PowerShell, Command Prompt, or the VS Code terminal and run:</p>
+<pre><code>py --version
+py -m pip --version</code></pre>
+<p>Using <code>python3 -m pip</code> or <code>py -m pip</code> makes sure that <code>pip</code> belongs to the same Python installation you just checked. This is more reliable than running <code>pip</code> by itself when several Python versions are installed.</p>
+<p>If both commands show version numbers, Python and pip are installed correctly. If a command is not found, check whether Python was installed correctly and added to PATH.</p>
+</section>
+<section id="part-2-installing-and-introducing-vs-code">
+<h2>Part 2: Installing and Introducing VS Code</h2>
+<p>Install VS Code, learn the main interface areas, and understand the menus commonly used by Python beginners.</p>
+<p>VS Code is the editor where you write, organize, run, and debug code. It becomes especially useful after installing extensions such as Python and Jupyter.</p>
+<h3>Step 1: Download VS Code</h3>
+<p>Go to the official VS Code download page:</p>
+<p><a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com/download</a></p>
+<p>Choose the installer that matches your operating system.</p>
+<p>Use the stable version unless you specifically need an insider or preview build. The stable version is recommended for everyday coding and teaching.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image9.png" alt="VS Code download page">
+  <figcaption class="caption">VS Code download page</figcaption>
+</figure>
+<h3>Step 2: First Look at VS Code</h3>
+<p>If this is your first time opening VS Code, the interface may look similar to the screenshot below.</p>
+<p>The most important areas are the left Activity Bar, the Explorer sidebar, the editor area, and the integrated terminal. You do not need to understand every button at the beginning.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image10.png" alt="VS Code first launch interface">
+  <figcaption class="caption">VS Code first launch interface</figcaption>
+</figure>
+<h3>Step 3: Understand the Main Interface Areas</h3>
+<h4>Explorer</h4>
+<p>Most of the time, VS Code is used for one project at a time. Open the project folder in VS Code, then edit the files from the Explorer.</p>
+<p>The Explorer shows all files and folders in your project. A good habit is to create one folder for each project, then open that folder with <strong>File -&gt; Open Folder</strong>.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image11.png" alt="VS Code Explorer">
+  <figcaption class="caption">VS Code Explorer</figcaption>
+</figure>
+<h4>Search</h4>
+<p>When a project has many files, Search helps you quickly find code, text, or filenames.</p>
+<p>Search is useful when you remember a function name, variable name, error message, or keyword but do not remember which file contains it.</p>
+<figure class="image-frame">
+  <img src="python-install-assets/image12.png" alt="VS Code Search">
+  <figcaption class="caption">VS Code Search</figcaption>
+</figure>
+<h4>Extensions</h4>
+<p>VS Code supports many extensions, such as Python, Jupyter, and Claude Code for VS Code. Extensions connect VS Code with powerful development tools.</p>
+<p>After installing a new extension, reopen VS Code if the extension asks you to reload.</p>
+<p>Recommended extensions for Python beginners:</p>
+<ul><li><strong>Python</strong> by Microsoft: provides Python language support, running, debugging, and environment selection.</li><li><strong>Jupyter</strong> by Microsoft: allows you to work with Python notebooks.</li><li><strong>Claude Code for VS Code</strong> by Anthropic: allows you to use Claude Code inside VS Code. The current extension requires VS Code 1.98.0 or later.</li></ul>
+<figure class="image-frame">
+  <img src="python-install-assets/image13.png" alt="VS Code Extensions">
+  <figcaption class="caption">VS Code Extensions</figcaption>
+</figure>
+<h3>Step 4: Useful VS Code Menus for Python Beginners</h3>
+<figure class="image-frame">
+  <img src="python-install-assets/image14.png" alt="VS Code extension details">
+  <figcaption class="caption">VS Code extension details</figcaption>
+</figure>
+<table>
+<thead><tr><th>Menu</th><th>Main Function</th><th>Useful Tip for Python Beginners</th></tr></thead>
+<tbody><tr><td>File</td><td>Manages files, folders, and windows.</td><td>To start a Python project, choose File -&gt; Open Folder, then select your project folder.</td></tr><tr><td>Edit</td><td>Helps you edit text in the editor.</td><td>Common shortcuts include Ctrl + Z for undo, Ctrl + C for copy, Ctrl + V for paste, and Ctrl + F for find.</td></tr><tr><td>Selection</td><td>Controls text selection and cursor behavior.</td><td>This is not used often at the beginning, but it becomes useful when editing many lines at once.</td></tr><tr><td>View</td><td>Controls what parts of the VS Code interface are displayed.</td><td>If you cannot find the terminal, choose View -&gt; Terminal.</td></tr><tr><td>Go</td><td>Helps you quickly jump to different places in your project.</td><td>This is useful when your project becomes larger and has many files.</td></tr><tr><td>Run</td><td>Runs and debugs your program.</td><td>Use this menu to run a Python file or debug your code step by step.</td></tr><tr><td>Terminal</td><td>Opens the command line inside VS Code.</td><td>On macOS/Linux, use <code>python3 --version</code> or <code>python3 test.py</code>. On Windows, use <code>py --version</code> or <code>py test.py</code>.</td></tr><tr><td>Help</td><td>Provides help and information about VS Code.</td><td>Use this menu when you need official help or want to check your VS Code version.</td></tr></tbody>
+</table>
+</section>
+<section id="part-3-installing-claude-code-with-deepseek-api-in-vs-code">
+<h2>Part 3: Installing Claude Code with DeepSeek API in VS Code</h2>
+<p>Install Claude Code, connect it with VS Code, and configure the DeepSeek API through CC Switch.</p>
+<p>Claude Code is a coding assistant that can help you understand code, edit files, run commands, and work inside a project. In this guide, Claude Code is configured to use the DeepSeek API through CC Switch.</p>
+<h3>Prerequisites</h3>
+<ul class="checklist"><li>macOS 13.0 or later, or Windows 10 version 1809 or later</li><li>VS Code 1.98.0 or later</li><li>A DeepSeek account, API Key, and sufficient API balance</li><li>A Terminal or command prompt</li><li>Homebrew on macOS, or WinGet on Windows</li><li>A network environment that can access the selected package manager</li></ul>
+<blockquote><p>Installation note: Anthropic recommends its native installer. This course guide instead uses Anthropic&#x27;s official Homebrew and WinGet packages, which are straightforward to update and do not require Node.js or npm. The DeepSeek and CC Switch configuration later in this guide is a third-party provider setup, not Anthropic&#x27;s official login flow. API usage is billed by DeepSeek under its own pricing and terms.</p></blockquote>
+<h3>Step 1: Install the VS Code Extension</h3>
+<p>Open the <strong>Extensions</strong> panel in VS Code, then search for and install <strong>Claude Code for VS Code</strong>. Confirm that the publisher is <strong>Anthropic</strong>, or use the <a href="https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code" target="_blank" rel="noopener noreferrer">official Visual Studio Marketplace page</a>.</p>
+<p>The VS Code extension provides the editor-side integration. The command-line Claude Code tool is installed separately in a later step.</p>
+<figure class="image-frame">
+  <img src="install-cc-in-vscode-assets/image1.png" alt="Claude Code for VS Code extension">
+  <figcaption class="caption">Claude Code for VS Code extension</figcaption>
+</figure>
+<h3>Step 2: Install Claude Code</h3>
+<p>Use the package-manager command for your operating system. Do not add <code>sudo</code> to any command below.</p>
+<h4>macOS: Install with Homebrew</h4>
+<p>First, check whether Homebrew is installed:</p>
+<pre><code>brew --version</code></pre>
+<p>If the command is not found, install Homebrew by following the instructions at <a href="https://brew.sh" target="_blank" rel="noopener noreferrer">https://brew.sh</a>, then reopen Terminal.</p>
+<p>Homebrew provides two Claude Code release channels. Choose <strong>one</strong> of them:</p>
+<table>
+<thead><tr><th>Channel</th><th>Installation Command</th><th>When to Choose It</th></tr></thead>
+<tbody><tr><td>Stable</td><td><code>brew install --cask claude-code</code></td><td>Recommended for most students. It is usually about one week behind and skips releases with major regressions.</td></tr><tr><td>Latest</td><td><code>brew install --cask claude-code@latest</code></td><td>Use this if you need new releases as soon as they are published.</td></tr></tbody>
+</table>
+<p>For the stable channel, run:</p>
+<pre><code>brew install --cask claude-code</code></pre>
+<p>For the latest channel, run instead:</p>
+<pre><code>brew install --cask claude-code@latest</code></pre>
+<p>After running the installation command, enter <code>claude --version</code>. A successful macOS installation should show output similar to the following screenshot. The exact version number may be different.</p>
+<figure class="image-frame">
+  <img src="install-cc-in-vscode-assets/macos-homebrew-install.png" alt="Successful Claude Code installation with Homebrew on macOS">
+  <figcaption class="caption">Successful Claude Code installation with Homebrew on macOS</figcaption>
+</figure>
+<p>Do not install both channels. Homebrew installations do <strong>not</strong> update automatically by default, so update Claude Code yourself periodically with the command matching the channel you installed:</p>
+<pre><code># Stable channel
+brew upgrade claude-code
+
+# Latest channel
+brew upgrade claude-code@latest</code></pre>
+<h4>Windows: Install with WinGet</h4>
+<p>Open <strong>PowerShell</strong> or <strong>Command Prompt</strong> and run:</p>
+<pre><code>winget install Anthropic.ClaudeCode</code></pre>
+<p>After the installation finishes, restart PowerShell or Command Prompt if requested, then enter <code>claude --version</code>. A successful Windows installation should show output similar to the following screenshot. The exact version number may be different.</p>
+<figure class="image-frame">
+  <img src="install-cc-in-vscode-assets/windows-winget-install.png" alt="Successful Claude Code installation with WinGet on Windows">
+  <figcaption class="caption">Successful Claude Code installation with WinGet on Windows</figcaption>
+</figure>
+<p>If <code>winget</code> is not found, install or update <strong>App Installer</strong> from the Microsoft Store, then reopen the terminal.</p>
+<p>WinGet installations also do <strong>not</strong> update automatically by default. Check for and install Claude Code updates periodically:</p>
+<pre><code>winget upgrade Anthropic.ClaudeCode</code></pre>
+<p>Unlike Homebrew on macOS, the WinGet instructions do not provide separate stable and latest package names.</p>
+<h3>Step 3: Verify the Installation</h3>
+<p>Close and reopen Terminal if necessary, then run:</p>
+<pre><code>claude --version</code></pre>
+<p>If the command prints a version number followed by <code>(Claude Code)</code>, the installation succeeded. If <code>claude</code> is not found, restart Terminal and try again.</p>
+<p>After completing the CC Switch configuration in the next step, open your project folder in VS Code, open its integrated Terminal, and run:</p>
+<pre><code>claude</code></pre>
+<p>If you see an interface similar to the screenshot below, Claude Code is ready to use.</p>
+<p>For a more detailed, read-only installation and settings check, run:</p>
+<pre><code>claude doctor</code></pre>
+<figure class="image-frame">
+  <img src="install-cc-in-vscode-assets/image5.png" alt="Claude Code terminal interface">
+  <figcaption class="caption">Claude Code terminal interface</figcaption>
+</figure>
+<h3>Step 4: Install CC Switch and Configure the DeepSeek API</h3>
+<p>CC Switch is used to switch Claude Code to the DeepSeek API.</p>
+<p>Without this configuration, Claude Code may try to use its default API connection. CC Switch writes the provider settings that route Claude Code requests to DeepSeek instead.</p>
+<blockquote><p>Security note: CC Switch is a community-maintained, open-source application; it is not an Anthropic or DeepSeek product. Download it only from the official project website or GitHub repository. Your API key is a secret stored on your computer: never paste it into course submissions, screenshots, chat messages, or source files.</p></blockquote>
+<p>Project URL:</p>
+<p><a href="https://ccswitch.io" target="_blank" rel="noopener noreferrer">https://ccswitch.io</a> · <a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noopener noreferrer">https://github.com/farion1231/cc-switch</a></p>
+<p>Open the project&#x27;s <strong>Releases</strong> page, expand <strong>Assets</strong>, and download the installer that matches your operating system.</p>
+<figure class="image-frame">
+  <img src="install-cc-in-vscode-assets/image6.png" alt="CC Switch release assets">
+  <figcaption class="caption">CC Switch release assets</figcaption>
+</figure>
+<p>Installer options:</p>
+<table>
+<thead><tr><th>Operating System</th><th>Installer</th></tr></thead>
+<tbody><tr><td>macOS</td><td>Choose the file ending in <code>.dmg</code></td></tr><tr><td>Windows</td><td>Choose the file ending in <code>.msi</code></td></tr></tbody>
+</table>
+<p>On macOS, you may alternatively install CC Switch with Homebrew:</p>
+<pre><code>brew install --cask cc-switch</code></pre>
+<figure class="image-frame">
+  <img src="install-cc-in-vscode-assets/image7.png" alt="CC Switch provider presets">
+  <figcaption class="caption">CC Switch provider presets</figcaption>
+</figure>
+<p>After opening CC Switch, make sure <strong>Claude Code</strong> is the selected application. Then:</p>
+<blockquote><p>Recommended provider: We recommend using <strong>DeepSeek</strong> for this course, and the steps below use DeepSeek as the example. However, CC Switch also supports other model providers, such as <strong>Kimi</strong>. You may choose another provider if you prefer; select its preset and enter the API Key issued by that provider. The configuration fields may vary slightly between providers.</p></blockquote>
+<p>For the recommended DeepSeek setup:</p>
+<ol><li>Click <strong>Add Provider</strong>.</li><li>Stay on <strong>Claude Provider</strong> and select the <strong>DeepSeek</strong> preset.</li><li>Enter your DeepSeek API Key. The preset fills in the endpoint and current model settings.</li><li>Click <strong>Add</strong> to save the provider.</li><li>Find the new DeepSeek provider card and click <strong>Enable</strong>. Saving alone does not activate it.</li></ol>
+<p>Make sure there are no extra spaces before or after the API key when you paste it.</p>
+<p>Create or manage your DeepSeek API Key here:</p>
+<p><a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noopener noreferrer">https://platform.deepseek.com/api_keys</a></p>
+<blockquote><p>Note: A DeepSeek API Key is shown in full only once when it is created. Save it immediately after creating it.</p></blockquote>
+<figure class="image-frame">
+  <img src="install-cc-in-vscode-assets/image8.png" alt="Configure DeepSeek API key in CC Switch">
+  <figcaption class="caption">Configure DeepSeek API key in CC Switch</figcaption>
+</figure>
+<h3>Finish Setup</h3>
+<p>Open your project folder in VS Code, open the integrated Terminal, and run <code>claude</code>. Enter a simple test request. If Claude Code responds normally, the DeepSeek provider is active.</p>
+<p>If Claude Code still asks you to sign in or shows an onboarding wizard, open <strong>CC Switch -&gt; Settings -&gt; General</strong>, enable <strong>Skip Claude Code first-run confirmation</strong>, close Claude Code, and start it again. This setting skips the official onboarding screen; it does not create an Anthropic account.</p>
+<p>If the test fails, check these items in order:</p>
+<ul class="checklist"><li>Run <code>claude doctor</code> and resolve any installation warning.</li><li>Confirm that the DeepSeek provider card is marked active in CC Switch.</li><li>Confirm that the API key has no extra spaces and that the DeepSeek account has API balance.</li><li>Close and reopen the terminal, then run <code>claude</code> again.</li></ul>
+<figure class="image-frame">
+  <img src="install-cc-in-vscode-assets/image9.png" alt="Claude Code ready to use">
+  <figcaption class="caption">Claude Code ready to use</figcaption>
+</figure>
+</section>
+<section id="official-references">
+<h2>Official References</h2>
+<ul class="checklist"><li><a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">Python downloads</a> and <a href="https://docs.python.org/3/using/windows.html" target="_blank" rel="noopener noreferrer">Using Python on Windows</a></li><li><a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">VS Code download</a> and <a href="https://code.visualstudio.com/docs/python/python-tutorial" target="_blank" rel="noopener noreferrer">Getting Started with Python in VS Code</a></li><li><a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener noreferrer">Claude Code advanced setup</a> and <a href="https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code" target="_blank" rel="noopener noreferrer">Claude Code for VS Code</a></li><li><a href="https://api-docs.deepseek.com/quick_start/agent_integrations/claude_code/" target="_blank" rel="noopener noreferrer">DeepSeek integration with Claude Code</a> and <a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noopener noreferrer">DeepSeek API Keys</a></li><li><a href="https://ccswitch.io" target="_blank" rel="noopener noreferrer">CC Switch official website</a>, <a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noopener noreferrer">GitHub repository</a>, and <a href="https://github.com/farion1231/cc-switch/blob/main/docs/user-manual/en/1-getting-started/1.4-quickstart.md" target="_blank" rel="noopener noreferrer">quick-start documentation</a></li></ul>
+</section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
