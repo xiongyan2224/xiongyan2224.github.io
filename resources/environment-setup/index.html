@@ -50,7 +50,7 @@
 <section id="part-1-installing-and-introducing-vs-code">
 <h2>Part 1: Installing and Introducing VS Code</h2>
 <p>Install VS Code, learn the main interface areas, and understand the menus commonly used by Python beginners.</p>
-<p>VS Code is the editor where you write, organize, run, and debug code. Installing it first gives the later Claude Code and Python steps one consistent place to work.</p>
+<p>VS Code is the editor where you write, organize, run, and debug code. It becomes especially useful after installing extensions such as Python and Jupyter.</p>
 <h3>Step 1: Download VS Code</h3>
 <p>Go to the official VS Code download page:</p>
 <p><a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com/download</a></p>
@@ -86,7 +86,7 @@
 <p>VS Code supports many extensions, such as Python, Jupyter, and Claude Code for VS Code. Extensions connect VS Code with powerful development tools.</p>
 <p>After installing a new extension, reopen VS Code if the extension asks you to reload.</p>
 <p>Recommended extensions for Python beginners:</p>
-<ul><li><strong>Python</strong> by Microsoft: provides Python language support, running, debugging, and environment selection.</li><li><strong>Jupyter</strong> by Microsoft: allows you to work with Python notebooks.</li><li><strong>Claude Code for VS Code</strong> by Anthropic: allows you to use Claude Code inside VS Code. The current extension requires VS Code 1.98.0 or later.</li></ul>
+<ul><li><strong>Python</strong>: provides Python language support, running, debugging, and environment selection.</li><li><strong>Jupyter</strong>: allows you to work with Python notebooks.</li><li><strong>Claude Code for VS Code</strong>: allows you to use Claude Code inside VS Code.</li></ul>
 <figure class="image-frame">
   <img src="python-install-assets/image13.png" alt="VS Code Extensions">
   <figcaption class="caption">VS Code Extensions</figcaption>
@@ -106,10 +106,10 @@
 <p>Install Claude Code, connect it with VS Code, and configure the DeepSeek API through CC Switch.</p>
 <p>Claude Code is a coding assistant that can help you understand code, edit files, run commands, and work inside a project. In this guide, Claude Code is configured to use the DeepSeek API through CC Switch.</p>
 <h3>Prerequisites</h3>
-<ul class="checklist"><li>macOS 13.0 or later, or Windows 10 version 1809 or later</li><li>VS Code 1.98.0 or later</li><li>A DeepSeek account, API Key, and sufficient API balance</li><li>A Terminal or command prompt</li><li>Homebrew on macOS, or WinGet on Windows</li><li>A network environment that can access the selected package manager</li></ul>
-<blockquote><p>Installation note: Anthropic recommends its native installer. This course guide instead uses Anthropic&#x27;s official Homebrew and WinGet packages, which are straightforward to update and do not require Node.js or npm. The DeepSeek and CC Switch configuration later in this guide is a third-party provider setup, not Anthropic&#x27;s official login flow. API usage is billed by DeepSeek under its own pricing and terms.</p></blockquote>
+<ul class="checklist"><li>VS Code</li><li>A DeepSeek API Key</li><li>A Terminal or command prompt</li><li>Homebrew on macOS, or WinGet on Windows</li><li>A network environment that can access the selected package manager</li></ul>
+<blockquote><p>Installation note: Anthropic recommends its native installer. This guide uses Anthropic&#x27;s official Homebrew and WinGet alternatives, which do not require Node.js or npm. The DeepSeek and CC Switch configuration later in this guide is not part of Anthropic&#x27;s official account setup.</p></blockquote>
 <h3>Step 1: Install the VS Code Extension</h3>
-<p>Open the <strong>Extensions</strong> panel in VS Code, then search for and install <strong>Claude Code for VS Code</strong>. Confirm that the publisher is <strong>Anthropic</strong>, or use the <a href="https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code" target="_blank" rel="noopener noreferrer">official Visual Studio Marketplace page</a>.</p>
+<p>Open the <strong>Extensions</strong> panel in VS Code, then search for and install <strong>Claude Code for VS Code</strong>.</p>
 <p>The VS Code extension provides the editor-side integration. The command-line Claude Code tool is installed separately in a later step.</p>
 <figure class="image-frame">
   <img src="install-cc-in-vscode-assets/image1.png" alt="Claude Code for VS Code extension">
@@ -166,10 +166,9 @@ brew upgrade claude-code@latest</code></pre>
 </figure>
 <h3>Step 4: Install CC Switch and Configure the DeepSeek API</h3>
 <p>CC Switch is used to switch Claude Code to the DeepSeek API.</p>
-<p>Without this configuration, Claude Code may try to use its default API connection. CC Switch writes the provider settings that route Claude Code requests to DeepSeek instead.</p>
-<blockquote><p>Security note: CC Switch is a community-maintained, open-source application; it is not an Anthropic or DeepSeek product. Download it only from the official project website or GitHub repository. Your API key is a secret stored on your computer: never paste it into course submissions, screenshots, chat messages, or source files.</p></blockquote>
+<p>Without this configuration, Claude Code may try to use its default API connection. CC Switch helps route Claude Code requests through the DeepSeek API instead.</p>
 <p>Project URL:</p>
-<p><a href="https://ccswitch.io" target="_blank" rel="noopener noreferrer">https://ccswitch.io</a> · <a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noopener noreferrer">https://github.com/farion1231/cc-switch</a></p>
+<p><a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noopener noreferrer">https://github.com/farion1231/cc-switch</a></p>
 <p>Open the project&#x27;s <strong>Releases</strong> page, expand <strong>Assets</strong>, and download the installer that matches your operating system.</p>
 <figure class="image-frame">
   <img src="install-cc-in-vscode-assets/image6.png" alt="CC Switch release assets">
@@ -184,10 +183,10 @@ brew upgrade claude-code@latest</code></pre>
   <img src="install-cc-in-vscode-assets/image7.png" alt="CC Switch provider presets">
   <figcaption class="caption">CC Switch provider presets</figcaption>
 </figure>
-<p>After opening CC Switch, make sure <strong>Claude Code</strong> is the selected application. Then:</p>
+<p>After opening CC Switch:</p>
 <blockquote><p>Recommended provider: We recommend using <strong>DeepSeek</strong> for this course, and the steps below use DeepSeek as the example. However, CC Switch also supports other model providers, such as <strong>Kimi</strong>. You may choose another provider if you prefer; select its preset and enter the API Key issued by that provider. The configuration fields may vary slightly between providers.</p></blockquote>
 <p>For the recommended DeepSeek setup:</p>
-<ol><li>Click <strong>Add Provider</strong>.</li><li>Stay on <strong>Claude Provider</strong> and select the <strong>DeepSeek</strong> preset.</li><li>Enter your DeepSeek API Key. The preset fills in the endpoint and current model settings.</li><li>Click <strong>Add</strong> to save the provider.</li><li>Find the new DeepSeek provider card and click <strong>Enable</strong>. Saving alone does not activate it.</li></ol>
+<ol><li>Select <strong>DeepSeek</strong>.</li><li>Enter your DeepSeek API Key.</li><li>Save the configuration.</li><li>Click <strong>Enable</strong> on the DeepSeek provider card. Saving alone does not activate it.</li></ol>
 <p>Make sure there are no extra spaces before or after the API key when you paste it.</p>
 <p>Create or manage your DeepSeek API Key here:</p>
 <p><a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noopener noreferrer">https://platform.deepseek.com/api_keys</a></p>
@@ -197,8 +196,7 @@ brew upgrade claude-code@latest</code></pre>
   <figcaption class="caption">Configure DeepSeek API key in CC Switch</figcaption>
 </figure>
 <h3>Finish Setup</h3>
-<p>Open your project folder in VS Code, open the integrated Terminal, and run <code>claude</code>. Enter a simple test request. If Claude Code responds normally, the DeepSeek provider is active and you can use Claude Code while completing Part 3.</p>
-<p>If Claude Code still asks you to sign in or shows an onboarding wizard, open <strong>CC Switch -&gt; Settings -&gt; General</strong>, enable <strong>Skip Claude Code first-run confirmation</strong>, close Claude Code, and start it again. This setting skips the official onboarding screen; it does not create an Anthropic account.</p>
+<p>After completing the steps above, open your project folder in VS Code and run <code>claude</code> in the integrated Terminal. Enter a simple test request. Continue to Part 3 when Claude Code responds normally.</p>
 <figure class="image-frame">
   <img src="install-cc-in-vscode-assets/image9.png" alt="Claude Code ready to use">
   <figcaption class="caption">Claude Code ready to use</figcaption>
@@ -206,7 +204,7 @@ brew upgrade claude-code@latest</code></pre>
 </section>
 <section id="part-3-installing-python">
 <h2>Part 3: Installing Python</h2>
-<p>Now that VS Code and Claude Code are ready, install Python from the official website, choose the right version, and make sure Python can be used from the VS Code terminal.</p>
+<p>Install Python from the official website, choose the right version, and make sure Python can be used from VS Code or Terminal.</p>
 <p>Python is the programming language runtime. After installation, your computer will be able to run <code>.py</code> files and use Python package tools such as <code>pip</code>. If a command fails, remove any passwords or API keys from the error message, then ask Claude Code in VS Code to explain the error and suggest the next check.</p>
 <h3>Step 1: Open the Python Download Page</h3>
 <p>Go to the official Python download page:</p>
