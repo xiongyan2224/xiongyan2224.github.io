@@ -21,6 +21,7 @@
         <li><a href="#part-1-installing-and-introducing-vs-code">Part 1: Installing and Introducing VS Code</a></li>
         <li><a href="#part-2-installing-claude-code-with-deepseek-api-in-vs-code">Part 2: Installing Claude Code with DeepSeek API in VS Code</a></li>
         <li><a href="#part-3-installing-python">Part 3: Installing Python</a></li>
+        <li><a href="#python-setup-check">Python Setup Check</a></li>
         <li><a href="#official-references">Official References</a></li>
       </ul>
     </nav>
@@ -271,6 +272,17 @@ python3 -m pip --version</code></pre>
 py -m pip --version</code></pre>
 <p>Using <code>python3 -m pip</code> or <code>py -m pip</code> makes sure that <code>pip</code> belongs to the same Python installation you just checked. This is more reliable than running <code>pip</code> by itself when several Python versions are installed.</p>
 <p>If both commands show version numbers, Python and pip are installed correctly. If a command is not found, check whether Python was installed correctly and added to PATH.</p>
+</section>
+<section id="python-setup-check">
+<h2>Step 6: Run the Python Setup Check</h2>
+<p>Before Lecture 2, install the basic packages and confirm that Python can calculate, work with a table, and display a chart.</p>
+<p><a href="python_default_check.ipynb" download><strong>Download the Python setup check (.ipynb)</strong></a></p>
+<ol>
+<li>Save the notebook to your course folder and open it in VS Code with the Microsoft Python and Jupyter extensions installed, or in JupyterLab.</li>
+<li>Follow Part 1 of the notebook to install NumPy, pandas, Matplotlib, and ipykernel. Select the same Python environment as the notebook kernel.</li>
+<li>Restart the kernel and run all cells. Confirm there are no errors, the line chart appears, and the final cell prints <strong>ALL CHECKS PASSED</strong>. Save your completed notebook.</li>
+</ol>
+<p>If a step fails, use Part 2 of the notebook to troubleshoot the first error. The tests use built-in data and work offline after package installation.</p>
 </section>
 <section id="official-references">
 <h2>Official References</h2>
